@@ -138,7 +138,7 @@ const responseYoroiMusha = {
   }
 }
 
-
+// #region get
 app.get('/', (req, res) => { res.send('Hello world') })
 
 app.get('/heroes', (req, res) => {
@@ -155,4 +155,11 @@ app.get('/heroes/kamui-woods', (req, res) => { res.send(`${responseKamuiWoods.he
 app.get('/heroes/wash', (req, res) => { res.send(`${responseWash.heroName}(${responseWash.realName})`) })
 app.get('/heroes/yaroi-musha', (req, res) => { res.send(`${responseYoroiMusha.heroName}(${responseYoroiMusha.realName})`) })
 
+// #region post
+app.post('/', (req, res) => { res.send('Plus ultra') })
+
+// #region put
+app.put('/', (req, res) => { res.send('put powers') })
+
+// #region listen
 app.listen(port, () => { console.log(`I'm listening on port ${port} 🪼`) })
