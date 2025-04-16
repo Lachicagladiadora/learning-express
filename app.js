@@ -156,10 +156,15 @@ app.get('/heroes/wash', (req, res) => { res.send(`${responseWash.heroName}(${res
 app.get('/heroes/yaroi-musha', (req, res) => { res.send(`${responseYoroiMusha.heroName}(${responseYoroiMusha.realName})`) })
 
 // #region post
-app.post('/', (req, res) => { res.send('Plus ultra') })
+app.post('/', (req, res) => { res.send('New plus ultra') })
 
 // #region put
-app.put('/', (req, res) => { res.send('put powers') })
+app.put('/', (req, res) => { res.send('Add powers') })
+
+// #region delete
+app.delete('/', (req, res) => {
+  res.send('Hero killed')
+})
 
 // #region listen
 app.listen(port, () => { console.log(`I'm listening on port ${port} 🪼`) })
